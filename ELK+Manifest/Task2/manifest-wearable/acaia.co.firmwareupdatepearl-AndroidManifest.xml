@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="18" ns0:versionName="0.9.1" package="acaia.co.firmwareupdatepearl" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="21"/>
+	<uses-feature ns0:name="android.hardware.bluetooth_le" ns0:required="true"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.READ_PHONE_STATE"/>
+	<application ns0:theme="@7F090120" ns0:label="@7F07005A" ns0:icon="@7F02003B" ns0:screenOrientation="1" ns0:allowBackup="true">
+		<activity ns0:name="net.hockeyapp.android.UpdateActivity"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F07005A" ns0:name="acaia.co.firmwareupdatepearl.MainActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070068" ns0:name="acaia.co.firmwareupdatepearl.Ui.selectScale.ScanScaleActivity" ns0:screenOrientation="1"/>
+		<service ns0:name="co.acaia.communications.scaleService.ScaleCommunicationService" ns0:enabled="true"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070069" ns0:name="acaia.co.firmwareupdatepearl.Ui.selectFirmware.SelectFirmwareActivity" ns0:screenOrientation="1"> /&gt;
+</activity>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070063" ns0:name="acaia.co.firmwareupdatepearl.Ui.firmwareList.FirmwareListActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070065" ns0:name="acaia.co.firmwareupdatepearl.Ui.guide.GuideActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F07006A" ns0:name="acaia.co.firmwareupdatepearl.Ui.firmwareList.SelectFirmwareFromListActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070060" ns0:name="acaia.co.firmwareupdatepearl.Ui.guide.CheckFirmwareVersion" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F07006C" ns0:name="acaia.co.firmwareupdatepearl.Ui.guide.SwitchUpdateMode" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070061" ns0:name="acaia.co.firmwareupdatepearl.Ui.guide.ConnectAppActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F07006B" ns0:name="acaia.co.firmwareupdatepearl.Ui.guide.StartFirmwareUpdate" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F07006E" ns0:name="acaia.co.firmwareupdatepearl.Ui.guide.TroubleShooting" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F07006D" ns0:name="acaia.co.firmwareupdatepearl.Ui.switchupdatemode.SwitchUpdateModeHelperActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="Pearl Updater" ns0:name="acaia.co.firmwareupdatepearl.StepUI.FirmwareStepStartActivity" ns0:screenOrientation="1">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070062" ns0:name="acaia.co.firmwareupdatepearl.Ui.FeedbackInitActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F090071" ns0:label="@7F070066" ns0:name="acaia.co.firmwareupdatepearl.Ui.note.NoteActivity" ns0:screenOrientation="1"/>
+		<service ns0:name="com.zendesk.sdk.network.impl.ConfigurationIntentService" ns0:exported="false"/>
+		<receiver ns0:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.BATTERY_LOW"/>
+				<action ns0:name="android.intent.action.BATTERY_OKAY"/>
+			</intent-filter>
+		</receiver>
+		<activity ns0:label="@7F070021" ns0:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" ns0:windowSoftInputMode="0x00000014"/>
+		<activity ns0:label="@7F070021" ns0:name="com.zendesk.sdk.requests.ViewRequestActivity" ns0:windowSoftInputMode="0x00000012"/>
+		<activity ns0:label="@7F070035" ns0:name="com.zendesk.sdk.requests.RequestActivity"/>
+		<activity ns0:label="@7F07003D" ns0:name="com.zendesk.sdk.support.SupportActivity" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.zendesk.sdk.support.ViewArticleActivity" ns0:configChanges="0x00000480"/>
+		<receiver ns0:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+			<intent-filter>
+				<action ns0:name="com.zendesk.sdk.deeplinking"/>
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

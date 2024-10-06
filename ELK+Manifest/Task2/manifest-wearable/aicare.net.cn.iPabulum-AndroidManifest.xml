@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="93" ns0:versionName="2.06" ns0:compileSdkVersion="28" ns0:compileSdkVersionCodename="9" package="aicare.net.cn.iPabulum" platformBuildVersionCode="93" platformBuildVersionName="2.060000">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="28"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.READ_LOGS"/>
+	<uses-permission ns0:name="android.permission.MOUNT_UNMOUNT_FILESYSTEM"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<meta-data ns0:name="android.max_aspect" ns0:value="2.100000"/>
+	<application ns0:theme="@7F100008" ns0:label="@7F0F0032" ns0:icon="@7F0D0067" ns0:name="aicare.net.cn.iPabulum.InitApplication" ns0:allowBackup="true" ns0:largeHeap="true" ns0:supportsRtl="true" ns0:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+		<provider ns0:name="android.support.v4.content.FileProvider" ns0:exported="false" ns0:authorities="aicare.net.cn.iPabulum.fileProvider" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F120000"/>
+		</provider>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.home.activity.MainActivity" ns0:launchMode="2" ns0:screenOrientation="1" ns0:windowSoftInputMode="0x00000022"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.foods.activity.FoodsCategoryActivity" ns0:launchMode="2" ns0:screenOrientation="1" ns0:configChanges="0x00002004" ns0:windowSoftInputMode="0x00000020"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.foods.activity.FoodsActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.foods.activity.FoodInfoActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.foods.activity.AddCustomActivity" ns0:launchMode="2" ns0:screenOrientation="1" ns0:windowSoftInputMode="0x00000020"/>
+		<service ns0:name="cn.net.aicare.pabulumlibrary.pabulum.PabulumService"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.UnitSwitchActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.foods.activity.SearchActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.PersonalActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.SetSexActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.AboutInfoActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.AboutActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.HelpActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.ShowRniActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.home.activity.CoffeeActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:name="aicare.net.cn.iPabulum.act.user.activity.GuideActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F100152" ns0:name="aicare.net.cn.iPabulum.act.user.activity.WelcomeActivity" ns0:launchMode="1" ns0:screenOrientation="1">
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.user.activity.SetRniActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:name="aicare.net.cn.iPabulum.act.plan.MakingPlansActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.home.activity.CoffeeHelpActivity"/>
+		<activity ns0:theme="@7F1001FB" ns0:name="aicare.net.cn.iPabulum.act.plat.PlatDialog"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.plat.NutritionalAnalysisActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.history.DietaryReportActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.plan.MyGoalActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.plan.GoalWeightActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.plan.EvaluationReportActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0032" ns0:name="aicare.net.cn.iPabulum.act.plan.PlanningWeekActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="aicare.net.cn.iPabulum.act.user.activity.PersonalRniActivity"/>
+		<receiver ns0:name="aicare.net.cn.iPabulum.services.LocalChangeReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.LOCALE_CHANGED"/>
+			</intent-filter>
+		</receiver>
+		<provider ns0:name="com.mob.MobProvider" ns0:exported="false" ns0:multiprocess="true" ns0:authorities="aicare.net.cn.iPabulum.com.mob.MobProvider"/>
+		<meta-data ns0:name="Mob-AppKey" ns0:value="28c4ac91e7aec"/>
+		<meta-data ns0:name="Mob-AppSeret" ns0:value="f6d8bb589436e5cc046a8a9ab33df884"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.mob.tools.MobUIShell" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000012">
+			<intent-filter>
+				<action ns0:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="cn.sharesdk.tencent.qq.ReceiveActivity" ns0:launchMode="2" ns0:noHistory="true">
+			<intent-filter>
+				<data ns0:scheme="tencent1105451971"/>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" ns0:exported="false" ns0:configChanges="0x000004A0"/>
+		<activity-alias ns0:name="aicare.net.cn.iPabulum.wxapi.WXEntryActivity" ns0:exported="true" ns0:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity"/>
+	</application>
+</manifest>

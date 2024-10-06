@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="160" ns0:versionName="1.6.0" package="ah.ecocktail" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+	<uses-sdk ns0:minSdkVersion="19" ns0:targetSdkVersion="26"/>
+	<uses-feature ns0:name="android.hardware.bluetooth_le" ns0:required="true"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.VIBRATE"/>
+	<application ns0:theme="@7F0A0044" ns0:label="@7F0701B0" ns0:icon="@7F0200FC" ns0:name="ah.application.MyApp" ns0:allowBackup="false">
+		<activity ns0:theme="@7F0A0002" ns0:label="@7F0701B0" ns0:name="ah.ecocktail.CocktailActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<service ns0:name="ah.ecocktail.WearListCallListenerService" ns0:enabled="true" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+				<data ns0:scheme="wear" ns0:host="*" ns0:pathPrefix="/eCOCKTAIL"/>
+			</intent-filter>
+		</service>
+		<service ns0:name="ah.bluetooth_le.BluetoothLeService" ns0:enabled="true"/>
+		<provider ns0:name="android.support.v4.content.FileProvider" ns0:exported="false" ns0:authorities="ah.ecocktail.provider" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F050001"/>
+		</provider>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false"/>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F0B0002"/>
+		<meta-data ns0:name="com.google.android.wearable.beta.app" ns0:resource="@7F050000"/>
+	</application>
+</manifest>

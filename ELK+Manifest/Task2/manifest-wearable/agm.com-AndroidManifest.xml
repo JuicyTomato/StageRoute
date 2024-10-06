@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="12107" ns0:versionName="1.2.1.7" package="agm.com" platformBuildVersionCode="12107" platformBuildVersionName="1.2.1.7">
+	<uses-sdk ns0:minSdkVersion="21" ns0:targetSdkVersion="27"/>
+	<uses-feature ns0:name="android.hardware.bluetooth_le" ns0:required="true"/>
+	<uses-permission ns0:name="android.permission.CAMERA"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.WAKE_LOCK"/>
+	<uses-permission ns0:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+	<uses-permission ns0:name="com.google.android.c2dm.permission.RECEIVE"/>
+	<permission ns0:name="agm.com.permission.C2D_MESSAGE" ns0:protectionLevel="0x00000002"/>
+	<uses-permission ns0:name="agm.com.permission.C2D_MESSAGE"/>
+	<application ns0:theme="@7F100007" ns0:label="@7F0F002D" ns0:icon="@7F0D0000" ns0:name="com.northstar.android.app.NorthStarApplication" ns0:allowBackup="true" ns0:supportsRtl="true" ns0:resizeableActivity="true">
+		<provider ns0:name="android.support.v4.content.FileProvider" ns0:exported="false" ns0:authorities="agm.app.file.provider" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F120000"/>
+		</provider>
+		<activity ns0:label="@7F0F002D" ns0:name="com.northstar.android.app.ui.activities.SplashScreenActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:label="@7F0F002D" ns0:name="com.northstar.android.app.ui.activities.MainActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000010"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.QrCodeActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.IdentifyBatteryActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000010"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.NotificationActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.TermsActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.FinActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000014"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.BatterySelectionActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.BatteryDetailActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.OverflowMenuActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.GenerateReportActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.BatteryListUpdateActivityNorthstar" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.ReleaseNotesActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.northstar.android.app.ui.activities.PdfPreviewActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<meta-data ns0:name="io.fabric.ApiKey" ns0:value="ddb95f1a3916d086472db92362f63a96f15a5b5b"/>
+		<service ns0:name="com.northstar.android.app.DfuLogMessageService"/>
+		<provider ns0:name="com.crashlytics.android.CrashlyticsInitProvider" ns0:exported="false" ns0:authorities="agm.com.crashlyticsinitprovider" ns0:initOrder="90"/>
+		<service ns0:name="com.google.firebase.components.ComponentDiscoveryService">
+			<meta-data ns0:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar"/>
+			<meta-data ns0:name="com.google.firebase.components:com.google.firebase.iid.Registrar" ns0:value="com.google.firebase.components.ComponentRegistrar"/>
+		</service>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementReceiver" ns0:enabled="true" ns0:exported="false"/>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" ns0:permission="android.permission.INSTALL_PACKAGES" ns0:enabled="true" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.android.vending.INSTALL_REFERRER"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementService" ns0:enabled="true" ns0:exported="false"/>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementJobService" ns0:permission="android.permission.BIND_JOB_SERVICE" ns0:enabled="true" ns0:exported="false"/>
+		<receiver ns0:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" ns0:permission="com.google.android.c2dm.permission.SEND" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.c2dm.intent.RECEIVE"/>
+				<category ns0:name="agm.com"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.google.firebase.iid.FirebaseInstanceIdService" ns0:exported="true">
+			<intent-filter ns0:priority="-500">
+				<action ns0:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+			</intent-filter>
+		</service>
+		<provider ns0:name="com.google.firebase.provider.FirebaseInitProvider" ns0:exported="false" ns0:authorities="agm.com.firebaseinitprovider" ns0:initOrder="100"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false"/>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F0A000A"/>
+	</application>
+</manifest>

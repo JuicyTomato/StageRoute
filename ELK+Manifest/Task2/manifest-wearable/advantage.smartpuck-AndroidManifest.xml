@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="10" ns0:versionName="2.0" package="advantage.smartpuck" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+	<uses-sdk ns0:minSdkVersion="21" ns0:targetSdkVersion="25"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<meta-data ns0:name="android.support.VERSION" ns0:value="25.3.1"/>
+	<uses-permission-sdk-23 ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<application ns0:theme="@7F09000B" ns0:label="@7F070041" ns0:icon="@7F030000" ns0:name="prosthetics5280.smartpuck.activities.SPApplication" ns0:allowBackup="true" ns0:largeHeap="true" ns0:supportsRtl="true" ns0:roundIcon="@7F030001">
+		<activity ns0:label="@7F070041" ns0:name="prosthetics5280.smartpuck.activities.MainActivity" ns0:screenOrientation="1" ns0:configChanges="0x000000A0">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<meta-data ns0:name="io.fabric.ApiKey" ns0:value="fd9803ce603667934a984eff27588cfa0f8e826e"/>
+		<meta-data ns0:name="com.android.vending.derived.apk.id" ns0:value="1"/>
+	</application>
+</manifest>

@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="40" ns0:versionName="1.1.2" ns0:compileSdkVersion="28" ns0:compileSdkVersionCodename="9" package="a4_storm.com.a360lock" platformBuildVersionCode="28" platformBuildVersionName="9">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="28"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.CAMERA"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_CONTACTS"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission ns0:name="android.permission.VIBRATE"/>
+	<uses-permission ns0:name="android.permission.WAKE_LOCK"/>
+	<uses-permission ns0:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="com.google.android.c2dm.permission.RECEIVE"/>
+	<uses-feature ns0:glEsVersion="0x00020000" ns0:required="true"/>
+	<uses-permission ns0:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+	<application ns0:theme="@7F120007" ns0:label="@7F110043" ns0:icon="@7F0F0000" ns0:name="a4_storm.com.a360lock.MyApplication" ns0:windowSoftInputMode="0x00000010" ns0:allowBackup="true" ns0:supportsRtl="true" ns0:usesCleartextTraffic="true" ns0:roundIcon="@7F0F0001" ns0:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+		<provider ns0:name="a4_storm.com.a360lock.GenericFileProvider" ns0:exported="false" ns0:authorities="a4_storm.com.a360lock.a4_storm.com.a360lock.provider" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F140000"/>
+		</provider>
+		<meta-data ns0:name="com.google.android.geo.API_KEY" ns0:value="@7F110150"/>
+		<meta-data ns0:name="com.google.firebase.messaging.default_notification_channel_id" ns0:value="@7F1100C5"/>
+		<activity ns0:theme="@7F12013C" ns0:name="a4_storm.com.a360lock.activities.SplashActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<meta-data ns0:name="com.facebook.sdk.ApplicationId" ns0:value="@7F1100EA"/>
+		<activity ns0:theme="@7F120267" ns0:label="@7F110043" ns0:name="com.facebook.FacebookActivity" ns0:configChanges="0x000005B0"/>
+		<activity ns0:name="com.facebook.CustomTabActivity" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<data ns0:scheme="@7F1100F3"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<data ns0:scheme="@7F1100EF"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@7F120009" ns0:label="@7F110043" ns0:name="a4_storm.com.a360lock.activities.MainActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080">
+			<meta-data ns0:name="android.support.PARENT_ACTIVITY" ns0:value="a4_storm.com.a360lock.activities.SplashActivity"/>
+			<intent-filter>
+				<action ns0:name="MAIN"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@7F120009" ns0:label="@7F1101FB" ns0:name="a4_storm.com.a360lock.activities.LockDetailActivity" ns0:launchMode="1" ns0:screenOrientation="1" ns0:configChanges="0x00000080" ns0:parentActivityName="a4_storm.com.a360lock.activities.MainActivity">
+			<meta-data ns0:name="android.support.PARENT_ACTIVITY" ns0:value="a4_storm.com.a360lock.activities.MainActivity"/>
+			<intent-filter>
+				<action ns0:name="LOCK_DETAIL"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<data ns0:scheme="http" ns0:host="app.the360lock.com" ns0:pathPrefix="/padlock"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<data ns0:scheme="https" ns0:host="app.the360lock.com" ns0:pathPrefix="/padlock"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<data ns0:scheme="http" ns0:host="app.the360lock.com" ns0:pathPrefix="/enc_padlock_share"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<data ns0:scheme="https" ns0:host="app.the360lock.com" ns0:pathPrefix="/enc_padlock_share"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@7F120009" ns0:label="@7F1101FD" ns0:name="a4_storm.com.a360lock.activities.MapsActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080"/>
+		<activity ns0:theme="@7F120009" ns0:label="@7F1101FA" ns0:name="a4_storm.com.a360lock.activities.LockAddActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080"/>
+		<activity ns0:theme="@7F120009" ns0:label="@7F1101FF" ns0:name="a4_storm.com.a360lock.activities.ShareAddActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080">
+			<intent-filter>
+				<action ns0:name="android.intent.action.SEARCH"/>
+			</intent-filter>
+			<meta-data ns0:name="android.app.searchable" ns0:resource="@7F140001"/>
+		</activity>
+		<activity ns0:theme="@7F120009" ns0:label="@7F1101FC" ns0:name="a4_storm.com.a360lock.activities.LoginActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080">
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<data ns0:scheme="https" ns0:host="app.the360lock.com" ns0:pathPrefix="/api/v1/auth"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<data ns0:scheme="https" ns0:host="app.the360lock.com" ns0:pathPrefix="/api/v1/auth"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:label="@7F1101F9" ns0:name="a4_storm.com.a360lock.activities.AccountActivity" ns0:screenOrientation="1" ns0:configChanges="0x00000080"/>
+		<service ns0:name="a4_storm.com.a360lock.services.MyFirebaseMessagingService">
+			<intent-filter>
+				<action ns0:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+		<service ns0:name="a4_storm.com.a360lock.services.MyFirebaseInstanceIDService">
+			<intent-filter>
+				<action ns0:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+			</intent-filter>
+		</service>
+		<activity ns0:theme="@7F12013C" ns0:label="@7F110193" ns0:name="a4_storm.com.a360lock.activities.LockPasswordResetActivity" ns0:configChanges="0x00000080"/>
+		<service ns0:name="a4_storm.com.a360lock.services.PadlockAutoConnectService" ns0:enabled="true" ns0:exported="true"/>
+		<receiver ns0:name="a4_storm.com.a360lock.services.MyBroadcastReceiver" ns0:enabled="true" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="android.intent.action.BOOT_COMPLETED"/>
+				<action ns0:name="a4_storm.com.a360lock.services.PadlockAutoConnectService.RESTART"/>
+			</intent-filter>
+		</receiver>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F0B000F"/>
+		<activity ns0:theme="@7F1200FE" ns0:label="" ns0:name="com.firebase.ui.auth.KickoffActivity" ns0:exported="false"/>
+		<activity ns0:label="@7F110136" ns0:name="com.firebase.ui.auth.ui.email.RecoverPasswordActivity" ns0:exported="false"/>
+		<activity ns0:label="@7F11012B" ns0:name="com.firebase.ui.auth.ui.email.EmailActivity" ns0:exported="false" ns0:windowSoftInputMode="0x00000010"/>
+		<activity ns0:label="@7F110130" ns0:name="com.firebase.ui.auth.ui.phone.PhoneActivity" ns0:exported="false" ns0:windowSoftInputMode="0x00000015"/>
+		<activity ns0:label="@7F110138" ns0:name="com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt" ns0:exported="false"/>
+		<activity ns0:label="@7F110139" ns0:name="com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt" ns0:exported="false" ns0:windowSoftInputMode="0x00000010"/>
+		<activity ns0:label="@7F110105" ns0:name="com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity" ns0:exported="false"/>
+		<activity ns0:name="com.facebook.CustomTabMainActivity"/>
+		<meta-data ns0:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" ns0:value="GlideModule"/>
+		<activity ns0:theme="@android:0103000B" ns0:name="org.acra.dialog.CrashReportDialog" ns0:finishOnTaskLaunch="true" ns0:excludeFromRecents="true" ns0:launchMode="3"/>
+		<service ns0:name="org.acra.sender.SenderService" ns0:exported="false" ns0:process=":acra"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" ns0:exported="false" ns0:excludeFromRecents="true"/>
+		<service ns0:name="com.google.android.gms.auth.api.signin.RevocationBoundService" ns0:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" ns0:exported="true"/>
+		<uses-library ns0:name="org.apache.http.legacy" ns0:required="false"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.firebase.auth.internal.FederatedSignInActivity" ns0:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" ns0:exported="true" ns0:excludeFromRecents="true" ns0:launchMode="2"/>
+		<service ns0:name="com.google.firebase.components.ComponentDiscoveryService" ns0:exported="false">
+			<meta-data ns0:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar"/>
+			<meta-data ns0:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar"/>
+			<meta-data ns0:name="com.google.firebase.components:com.google.firebase.iid.Registrar" ns0:value="com.google.firebase.components.ComponentRegistrar"/>
+		</service>
+		<service ns0:name="com.google.firebase.messaging.FirebaseMessagingService" ns0:exported="true">
+			<intent-filter ns0:priority="-500">
+				<action ns0:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementReceiver" ns0:enabled="true" ns0:exported="false"/>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" ns0:permission="android.permission.INSTALL_PACKAGES" ns0:enabled="true" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.android.vending.INSTALL_REFERRER"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementService" ns0:enabled="true" ns0:exported="false"/>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementJobService" ns0:permission="android.permission.BIND_JOB_SERVICE" ns0:enabled="true" ns0:exported="false"/>
+		<receiver ns0:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" ns0:permission="com.google.android.c2dm.permission.SEND" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.c2dm.intent.RECEIVE"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.google.firebase.iid.FirebaseInstanceIdService" ns0:exported="true">
+			<intent-filter ns0:priority="-500">
+				<action ns0:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+			</intent-filter>
+		</service>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false"/>
+		<provider ns0:name="com.google.firebase.provider.FirebaseInitProvider" ns0:exported="false" ns0:authorities="a4_storm.com.a360lock.firebaseinitprovider" ns0:initOrder="100"/>
+		<uses-library ns0:name="com.google.android.wearable" ns0:required="false"/>
+		<service ns0:name="com.firebase.jobdispatcher.GooglePlayReceiver" ns0:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+			</intent-filter>
+		</service>
+		<provider ns0:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer" ns0:exported="false" ns0:multiprocess="true" ns0:authorities="a4_storm.com.a360lock.lifecycle-trojan"/>
+		<provider ns0:name="com.facebook.internal.FacebookInitProvider" ns0:exported="false" ns0:authorities="a4_storm.com.a360lock.FacebookInitProvider"/>
+		<receiver ns0:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" ns0:exported="false">
+			<intent-filter>
+				<action ns0:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+			</intent-filter>
+		</receiver>
+		<meta-data ns0:name="android.support.VERSION" ns0:value="26.0.2"/>
+	</application>
+</manifest>

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="40" ns0:versionName="1.21" package="aicare.net.cn.aibrush">
+	<uses-sdk ns0:minSdkVersion="19" ns0:targetSdkVersion="26"/>
+	<uses-feature ns0:name="android.hardware.bluetooth_le" ns0:required="true"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission ns0:name="android.permission.STORAGE_PERMISSION"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.CAMERA"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.READ_LOGS"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<meta-data ns0:name="android.max_aspect" ns0:value="2.100000"/>
+	<uses-permission ns0:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<application ns0:theme="@7F0F0006" ns0:label="@7F0E002B" ns0:icon="@7F0D0030" ns0:name="aicare.net.cn.aibrush.InitApplication" ns0:allowBackup="true" ns0:largeHeap="true" ns0:supportsRtl="true">
+		<activity ns0:theme="@7F0F0008" ns0:label="@7F0E002A" ns0:name="aicare.net.cn.aibrush.activity.main.MainActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.ScanActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.QueryActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.SetOralActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.SetModeActivity" ns0:screenOrientation="1"/>
+		<service ns0:name="aicare.net.cn.toothbrushlibrary.toothbrush.ToothbrushService"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.CustomModeActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.PresetModeActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.device.MyDeviceActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.ResultScoreActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.SplashActivity" ns0:screenOrientation="1">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.UsageActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.GuideActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.RemindActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.AboutUsActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.DiscoverHtmlActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.DiscoverVideoActivity" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<receiver ns0:name="aicare.net.cn.aibrush.alarm.AlarmReceiver">
+			<intent-filter>
+				<action ns0:name="aicare.net.cn.aibrush.alarm.clock"/>
+			</intent-filter>
+		</receiver>
+		<provider ns0:name="android.support.v4.content.FileProvider" ns0:exported="false" ns0:authorities="aicare.net.cn.aibrush.fileProvider" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F110000"/>
+		</provider>
+		<receiver ns0:name="aicare.net.cn.aibrush.base.LocalReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.LOCALE_CHANGED"/>
+			</intent-filter>
+		</receiver>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.user.LoginActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.user.RegisteredActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.user.MovePwdActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.user.ForgetPwdActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.user.FirstLoginDataActivity" ns0:screenOrientation="1" ns0:windowSoftInputMode="0x00000022"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.user.MeDataActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F0008" ns0:name="aicare.net.cn.aibrush.activity.WebViewActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F0F01A4" ns0:name="aicare.net.cn.aibrush.dialog.HintExitUserActivity" ns0:launchMode="2"/>
+		<provider ns0:name="com.mob.MobProvider" ns0:exported="false" ns0:multiprocess="true" ns0:authorities="aicare.net.cn.aibrush.com.mob.MobProvider"/>
+		<meta-data ns0:name="Mob-AppKey" ns0:value="1e2a27404a6bb"/>
+		<meta-data ns0:name="Mob-AppSeret" ns0:value="b6f3de30ad5e9ae9d526c8c4149229b9"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.mob.tools.MobUIShell" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000012">
+			<intent-filter>
+				<action ns0:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="cn.sharesdk.tencent.qq.ReceiveActivity" ns0:launchMode="2" ns0:noHistory="true">
+			<intent-filter>
+				<data ns0:scheme="tencent1106111609"/>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" ns0:exported="false" ns0:configChanges="0x000004A0"/>
+		<activity-alias ns0:name="aicare.net.cn.aibrush.wxapi.WXEntryActivity" ns0:exported="true" ns0:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity"/>
+		<activity ns0:theme="@7F0F00A9" ns0:label="" ns0:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" ns0:exported="false"/>
+		<meta-data ns0:name="android.support.VERSION" ns0:value="25.4.0"/>
+		<meta-data ns0:name="com.android.vending.derived.apk.id" ns0:value="1"/>
+	</application>
+</manifest>

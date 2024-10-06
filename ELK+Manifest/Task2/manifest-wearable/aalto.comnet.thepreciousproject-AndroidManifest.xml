@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="259" ns0:versionName="2.59" package="aalto.comnet.thepreciousproject" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+	<uses-sdk ns0:minSdkVersion="15" ns0:targetSdkVersion="23"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.VIBRATE"/>
+	<uses-permission ns0:name="android.permission.WAKE_LOCK"/>
+	<uses-permission ns0:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-feature ns0:glEsVersion="0x00020000" ns0:required="true"/>
+	<uses-permission ns0:name="com.google.android.c2dm.permission.RECEIVE"/>
+	<application ns0:theme="@7F0B0084" ns0:label="@7F070047" ns0:icon="@7F030000" ns0:allowBackup="true" ns0:supportsRtl="true">
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070047" ns0:name="ui.precious.comnet.aalto.precious.ui_MainActivity" ns0:screenOrientation="7">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F0C000B"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070100" ns0:name="outcomegoal.precious.comnet.aalto.outcomegoal_activity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F0700B4" ns0:name="importance_ruler.precious.comnet.aalto.ImportanceRulerActivity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F0700B4" ns0:name="activity_tracker.precious.comnet.aalto.MountainViewActivity" ns0:screenOrientation="7"/>
+		<service ns0:name="activity_tracker.precious.comnet.aalto.DetectionRequesterService" ns0:exported="true"/>
+		<activity ns0:theme="@7F0B00F7" ns0:name="activity_tracker.precious.comnet.aalto.AddActivity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B00F7" ns0:name="activity_tracker.precious.comnet.aalto.PromptDeleteInfo" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@android:01030071" ns0:name="activity_tracker.precious.comnet.aalto.ChooseActivity" ns0:screenOrientation="7"/>
+		<service ns0:name="activity_tracker.precious.comnet.aalto.ActivityRecognitionIntentService"/>
+		<receiver ns0:name="activity_tracker.precious.comnet.aalto.Autostart">
+			<intent-filter>
+				<action ns0:name="android.intent.action.BOOT_COMPLETED">
+					<category ns0:name="android.intent.category.HOME"/>
+				</action>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="activity_tracker.precious.comnet.aalto.atGoalSettingReminder"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070098" ns0:name="food_diary.precious.comnet.aalto.fd_MainActivity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:name="food_diary.precious.comnet.aalto.fd_SelectFood" ns0:screenOrientation="7" ns0:windowSoftInputMode="0x00000004"/>
+		<service ns0:name="food_diary.precious.comnet.aalto.fd_FoodInputReminder"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="Onboarding" ns0:name="onboarding.precious.comnet.aalto.obMainActivity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@android:0103006C" ns0:label="SignUp" ns0:name="onboarding.precious.comnet.aalto.obSignUp" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="SignIn" ns0:name="onboarding.precious.comnet.aalto.obSignIn" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B00F7" ns0:name="onboarding.precious.comnet.aalto.obTermsAndConditions" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B00F7" ns0:name="onboarding.precious.comnet.aalto.obRequestGroupID" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="FB" ns0:name="firstbeat.precious.comnet.aalto.fbMainActivity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@android:0103000A" ns0:name="ui.precious.comnet.aalto.precious.Timeline" ns0:screenOrientation="7"/>
+		<service ns0:name="uploader.precious.comnet.aalto.SendLog"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070077" ns0:name="diet_challenges.precious.comnet.aalto.fi.dc_MainActivity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B010D" ns0:name="diet_challenges.precious.comnet.aalto.fi.dc_AddChallenge" ns0:screenOrientation="7"/>
+		<service ns0:name="diet_challenges.precious.comnet.aalto.fi.dc_Reminder"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070118" ns0:name="pa_state_of_change.precious.comnet.aalto.pa_soc_activity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070151" ns0:name="time_machine.precious.comnet.aalto.time_machine_activity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B0031" ns0:label="@7F070086" ns0:name="my_favourites.precious.comnet.aalto.my_favourites_activity" ns0:screenOrientation="7"/>
+		<activity ns0:theme="@7F0B00B4" ns0:label="@7F07006D" ns0:name="confidence_ruler.precious.comnet.aalto.confidence_ruler_activity" ns0:screenOrientation="7"/>
+		<activity ns0:label="@7F070047" ns0:name="wearable.precious.comnet.aalto.WearableMainActivity"/>
+		<activity ns0:label="@7F070047" ns0:name="wearable.precious.comnet.aalto.ScanActivity"/>
+		<service ns0:name="wearable.precious.comnet.aalto.BackgroundService"/>
+		<service ns0:name="wearable.precious.comnet.aalto.CheckIfWearableServiceRunning"/>
+		<activity ns0:theme="@android:0103000F" ns0:name="com.google.android.gms.ads.AdActivity" ns0:configChanges="0x00000FB0"/>
+		<activity ns0:theme="@7F0B0104" ns0:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"/>
+		<activity ns0:theme="@7F0B0103" ns0:name="com.google.android.gms.appinvite.PreviewActivity" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" ns0:exported="false" ns0:excludeFromRecents="true"/>
+		<service ns0:name="com.google.android.gms.auth.api.signin.RevocationBoundService" ns0:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" ns0:exported="true"/>
+		<provider ns0:name="com.google.android.gms.measurement.AppMeasurementContentProvider" ns0:exported="false" ns0:authorities="aalto.comnet.thepreciousproject.google_measurement_service"/>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementReceiver" ns0:enabled="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.gms.measurement.UPLOAD"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementService" ns0:enabled="true" ns0:exported="false"/>
+	</application>
+</manifest>

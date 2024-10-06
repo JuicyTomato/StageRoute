@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="1310" ns0:versionName="1.310" ns0:installLocation="1" package="aacnet.eu.Broadnet">
+	<uses-sdk ns0:minSdkVersion="8" ns0:targetSdkVersion="8"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.BROADCAST_STICKY"/>
+	<uses-permission ns0:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission ns0:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.WAKE_LOCK"/>
+	<uses-permission ns0:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission ns0:name="android.permission.VIBRATE"/>
+	<uses-permission ns0:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.SEND_SMS"/>
+	<uses-permission ns0:name="android.permission.RECEIVE_SMS"/>
+	<application ns0:label="@7F080000" ns0:icon="@7F02000D" ns0:configChanges="0x000000A0" ns0:allowBackup="false">
+		<activity ns0:theme="@android:01030009" ns0:label="@7F080000" ns0:name="ro.ui.pttdroid.Main" ns0:launchMode="3" ns0:windowSoftInputMode="0x00000002">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@android:01030007" ns0:label="@7F080003" ns0:name="ro.ui.pttdroid.settings.CommSettings"/>
+		<activity ns0:theme="@android:01030007" ns0:label="@7F080003" ns0:name="ro.ui.pttdroid.addnoteActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="Device list" ns0:name="ro.ui.pttdroid.DeviceListActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="SOS" ns0:name="ro.ui.pttdroid.SOSActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="CAD" ns0:name="ro.ui.pttdroid.CadActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="Device list" ns0:name="ro.ui.pttdroid.unpwActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="Display image" ns0:name="ro.ui.pttdroid.imageActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="General Info" ns0:name="ro.ui.pttdroid.infoActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="Main Menu" ns0:name="ro.ui.pttdroid.menuActivity"/>
+		<activity ns0:theme="@android:01030007" ns0:label="Select channel" ns0:name="ro.ui.pttdroid.ChannelActivity"/>
+		<service ns0:label="Ipox" ns0:name="ro.ui.pttdroid.Broadnet" ns0:enabled="true" ns0:exported="false"/>
+		<receiver ns0:name="ro.ui.pttdroid.SmsReceiver" ns0:enabled="true">
+			<intent-filter ns0:priority="2147483647">
+				<action ns0:name="android.provider.Telephony.SMS_RECEIVED"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.MediaButtonReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MEDIA_BUTTON" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.PTTDownReceiver">
+			<intent-filter>
+				<action ns0:name="com.BrighterWirelessMain.Main.PTTDown" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.PTTUpReceiver">
+			<intent-filter>
+				<action ns0:name="com.BrighterWirelessMain.Main.PTTUp" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.PTTDownReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.PTT.down" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.PTTUpReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.PTT.up" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.SOSDownReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.SOS.down" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.mediabuttonreceiver.SOSUpReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.SOS.up" ns0:priority="32768"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:label="NetworkConnection" ns0:name="ro.ui.pttdroid.receiver.ConnectionChangeReceiver">
+			<intent-filter>
+				<action ns0:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="ro.ui.pttdroid.MyStartupIntentReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.BOOT_COMPLETED"/>
+				<category ns0:name="android.intent.category.HOME"/>
+			</intent-filter>
+		</receiver>
+		<activity ns0:label="Select a server" ns0:name="ro.ui.pttdroid.ServerActivity" ns0:windowSoftInputMode="0x00000002">
+			<meta-data ns0:name="android.support.PARENT_ACTIVITY" ns0:value="ro.ui.pttdroid.Main"/>
+		</activity>
+		<activity ns0:label="@7F08002B" ns0:name="ro.ui.pttdroid.NewsActivity">
+			<meta-data ns0:name="android.support.PARENT_ACTIVITY" ns0:value="ro.ui.pttdroid.Main"/>
+		</activity>
+		<activity ns0:label="Select talkgroup:" ns0:name="ro.ui.pttdroid.AreaActivity">
+			<meta-data ns0:name="android.support.PARENT_ACTIVITY" ns0:value="ro.ui.pttdroid.Main"/>
+		</activity>
+		<service ns0:name="ro.ui.pttdroid.MyService">
+			<intent-filter>
+				<action ns0:name="ro.ui.pttdroid.MyService"/>
+			</intent-filter>
+		</service>
+		<activity ns0:label="Chat" ns0:name="ro.ui.pttdroid.ChatActivity" ns0:windowSoftInputMode="0x00000002">
+			<meta-data ns0:name="android.support.PARENT_ACTIVITY" ns0:value="ro.ui.pttdroid.Main"/>
+		</activity>
+	</application>
+</manifest>

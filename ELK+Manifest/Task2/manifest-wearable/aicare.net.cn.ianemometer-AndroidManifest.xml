@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="2" ns0:versionName="0.5" package="aicare.net.cn.ianemometer" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="23"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<application ns0:theme="@7F09008B" ns0:label="@7F060014" ns0:icon="@7F030005" ns0:allowBackup="true" ns0:supportsRtl="true">
+		<activity ns0:name="aicare.net.cn.ianemometer.MyActivity" ns0:screenOrientation="1">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="aicare.net.cn.ianemometer.DataSamplingActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="aicare.net.cn.ianemometer.AboutUsActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="aicare.net.cn.ianemometer.SetTimeOffActivity" ns0:screenOrientation="1"/>
+		<service ns0:name="aicare.net.cn.ianemometerlibrary.anemometer.AnemometerService"/>
+		<service ns0:name="aicare.net.cn.ianemometer.sevices.DownloadService"/>
+	</application>
+</manifest>

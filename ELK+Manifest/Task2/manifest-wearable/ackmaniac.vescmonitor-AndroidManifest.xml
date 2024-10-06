@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="168" ns0:versionName="1.126" ns0:compileSdkVersion="28" ns0:compileSdkVersionCodename="9" package="ackmaniac.vescmonitor" platformBuildVersionCode="28" platformBuildVersionName="9">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="28"/>
+	<uses-feature ns0:name="android.hardware.bluetooth_le" ns0:required="true"/>
+	<uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission ns0:name="android.permission.RECORD_VIDEO"/>
+	<uses-permission ns0:name="android.permission.CAMERA"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-feature ns0:glEsVersion="0x00020000" ns0:required="true"/>
+	<application ns0:theme="@android:01030119" ns0:label="@7F0D0032" ns0:icon="@7F070079" ns0:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+		<uses-library ns0:name="org.apache.http.legacy" ns0:required="false"/>
+		<service ns0:name="ackmaniac.vescmonitor.NotificationService" ns0:enabled="true" ns0:exported="true"/>
+		<activity ns0:label="@7F0D0032" ns0:name="ackmaniac.vescmonitor.DeviceScanActivity" ns0:screenOrientation="12" ns0:keepScreenOn="true">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="ackmaniac.vescmonitor.Settings" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:name="ackmaniac.vescmonitor.ModeSettings" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:name="ackmaniac.vescmonitor.DeviceControlActivity" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<service ns0:name="ackmaniac.vescmonitor.BluetoothLeService" ns0:enabled="true" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:label="@7F0D00B8" ns0:name="ackmaniac.vescmonitor.Modes" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:label="@7F0D00B2" ns0:name="ackmaniac.vescmonitor.BatterySetup" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:label="@7F0D00B5" ns0:name="ackmaniac.vescmonitor.DriveGearSetup" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:label="@7F0D00B9" ns0:name="ackmaniac.vescmonitor.LineChartActivity" ns0:keepScreenOn="true"/>
+		<activity ns0:label="@7F0D00BB" ns0:name="ackmaniac.vescmonitor.VideoSettings" ns0:screenOrientation="12" ns0:keepScreenOn="true"/>
+		<activity ns0:label="@7F0D00B6" ns0:name="ackmaniac.vescmonitor.FileChooserActivity" ns0:configChanges="0x00000480"/>
+		<activity ns0:name="ackmaniac.vescmonitor.ThrottleCurveActivity" ns0:screenOrientation="12"/>
+		<activity ns0:label="@7F0D00B4" ns0:name="ackmaniac.vescmonitor.BoardInfo"/>
+		<activity ns0:label="@7F0D00B3" ns0:name="ackmaniac.vescmonitor.BlankActivity"/>
+		<service ns0:name="ackmaniac.vescmonitor.DetectedService" ns0:enabled="true" ns0:exported="true"/>
+		<service ns0:name="ackmaniac.vescmonitor.MyService" ns0:enabled="true" ns0:exported="true"/>
+		<meta-data ns0:name="com.google.android.geo.API_KEY" ns0:value="@7F0D0063"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false"/>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F090004"/>
+	</application>
+</manifest>

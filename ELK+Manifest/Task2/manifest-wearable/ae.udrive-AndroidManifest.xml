@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="60" ns0:versionName="1.6.10" package="ae.udrive">
+	<uses-sdk ns0:minSdkVersion="16" ns0:targetSdkVersion="26"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.CAMERA"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-feature ns0:name="android.hardware.bluetooth_le" ns0:required="false"/>
+	<uses-feature ns0:name="android.hardware.camera" ns0:required="false"/>
+	<uses-permission ns0:name="android.permission.VIBRATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-feature ns0:glEsVersion="0x00020000" ns0:required="true"/>
+	<uses-permission ns0:name="android.permission.WAKE_LOCK"/>
+	<uses-permission ns0:name="com.google.android.c2dm.permission.RECEIVE"/>
+	<permission ns0:name="ae.udrive.permission.C2D_MESSAGE" ns0:protectionLevel="0x00000002"/>
+	<uses-permission ns0:name="ae.udrive.permission.C2D_MESSAGE"/>
+	<uses-feature ns0:name="android.hardware.camera.front" ns0:required="false"/>
+	<uses-feature ns0:name="android.hardware.camera.autofocus" ns0:required="false"/>
+	<uses-feature ns0:name="android.hardware.camera.flash" ns0:required="false"/>
+	<uses-feature ns0:name="android.hardware.screen.landscape" ns0:required="false"/>
+	<uses-feature ns0:name="android.hardware.wifi" ns0:required="false"/>
+	<application ns0:theme="@7F100006" ns0:label="@7F0F0025" ns0:icon="@7F0D0000" ns0:name="com.invers.basebookingapp.application.MyApplication" ns0:allowBackup="false" ns0:supportsRtl="true">
+		<activity ns0:label="@7F0F0025" ns0:name="com.invers.basebookingapp.activities.StartActivity" ns0:screenOrientation="1">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+			<intent-filter ns0:autoVerify="true">
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<data ns0:scheme="@7F0F01F7" ns0:host="*"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:label="@7F0F0025" ns0:name="com.invers.basebookingapp.activities.LoginActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F003D" ns0:name="com.invers.basebookingapp.activities.BookingParametersActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F00E7" ns0:name="com.invers.basebookingapp.activities.SettingsActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.ReservationDetailActivity" ns0:screenOrientation="1"/>
+		<activity ns0:label="@7F0F0038" ns0:name="com.invers.basebookingapp.activities.BookActivity" ns0:screenOrientation="1" ns0:windowSoftInputMode="0x00000002"/>
+		<activity ns0:label="@7F0F0069" ns0:name="com.invers.basebookingapp.activities.CustomerSelectionActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.SendVCSForReservationActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.SmartAccessActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.DriveActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.EditReservationActivity" ns0:screenOrientation="1"/>
+		<meta-data ns0:name="com.google.android.geo.API_KEY" ns0:value="@7F0F012F"/>
+		<meta-data ns0:name="io.fabric.ApiKey" ns0:value="5c31dd9e4469add75ec4568d6f9ef701d4e27479"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.ProviderSelectionActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.invers.basebookingapp.activities.WebViewActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F10000D" ns0:name="com.invers.basebookingapp.activities.MainActivity" ns0:screenOrientation="1"/>
+		<service ns0:name="com.invers.basebookingapp.tools.push.MyFirebaseMessagingService">
+			<intent-filter>
+				<action ns0:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+		<service ns0:name="com.invers.basebookingapp.tools.push.MyFirebaseInstanceIDService">
+			<intent-filter>
+				<action ns0:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+			</intent-filter>
+		</service>
+		<receiver ns0:name="com.invers.basebookingapp.tools.push.PushBroadcastReceiver" ns0:exported="false">
+			<intent-filter ns0:priority="1">
+				<action ns0:name="com.invers.bookingapp.GOT_PUSH"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.invers.basebookingapp.tools.push.PushBackgroundService" ns0:exported="false"/>
+		<activity ns0:theme="@7F10000D" ns0:name="com.invers.basebookingapp.activities.onboarding.OnBoardingActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="io.card.payment.CardIOActivity" ns0:configChanges="0x000000A0"/>
+		<activity ns0:name="io.card.payment.DataEntryActivity"/>
+		<activity ns0:theme="@7F100164" ns0:name="com.jumio.nv.NetverifyActivity" ns0:configChanges="0x000005A0" ns0:hardwareAccelerated="true"/>
+		<service ns0:name="com.invers.basebookingapp.smart_access_ble.BluetoothLEService" ns0:enabled="true" ns0:exported="false"/>
+		<meta-data ns0:name="android.support.VERSION" ns0:value="26.1.0"/>
+		<service ns0:name="com.google.firebase.messaging.FirebaseMessagingService" ns0:exported="true">
+			<intent-filter ns0:priority="-500">
+				<action ns0:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementReceiver" ns0:enabled="true" ns0:exported="false"/>
+		<receiver ns0:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" ns0:permission="android.permission.INSTALL_PACKAGES" ns0:enabled="true" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.android.vending.INSTALL_REFERRER"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementService" ns0:enabled="true" ns0:exported="false"/>
+		<service ns0:name="com.google.android.gms.measurement.AppMeasurementJobService" ns0:permission="android.permission.BIND_JOB_SERVICE" ns0:enabled="true" ns0:exported="false"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false"/>
+		<receiver ns0:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" ns0:permission="com.google.android.c2dm.permission.SEND" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.google.android.c2dm.intent.RECEIVE"/>
+				<category ns0:name="ae.udrive"/>
+			</intent-filter>
+		</receiver>
+		<receiver ns0:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" ns0:exported="false"/>
+		<service ns0:name="com.google.firebase.iid.FirebaseInstanceIdService" ns0:exported="true">
+			<intent-filter ns0:priority="-500">
+				<action ns0:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+			</intent-filter>
+		</service>
+		<provider ns0:name="com.google.firebase.provider.FirebaseInitProvider" ns0:exported="false" ns0:authorities="ae.udrive.firebaseinitprovider" ns0:initOrder="100"/>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F0A000B"/>
+		<provider ns0:name="com.crashlytics.android.CrashlyticsInitProvider" ns0:exported="false" ns0:authorities="ae.udrive.crashlyticsinitprovider" ns0:initOrder="100"/>
+		<activity ns0:theme="@7F1001EF" ns0:name="com.journeyapps.barcodescanner.CaptureActivity" ns0:clearTaskOnLaunch="true" ns0:stateNotNeeded="true" ns0:screenOrientation="6" ns0:windowSoftInputMode="0x00000003"/>
+		<receiver ns0:name="org.piwik.sdk.extra.InstallReferrerReceiver" ns0:exported="true">
+			<intent-filter>
+				<action ns0:name="com.android.vending.INSTALL_REFERRER"/>
+			</intent-filter>
+		</receiver>
+		<meta-data ns0:name="android.arch.lifecycle.VERSION" ns0:value="27.0.0-SNAPSHOT"/>
+	</application>
+</manifest>

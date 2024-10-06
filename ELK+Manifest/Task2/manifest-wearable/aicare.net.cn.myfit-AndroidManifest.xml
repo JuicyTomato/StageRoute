@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="5" ns0:versionName="1.0.1" ns0:compileSdkVersion="28" ns0:compileSdkVersionCodename="9" package="aicare.net.cn.myfit" platformBuildVersionCode="28" platformBuildVersionName="9">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="26"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission ns0:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission ns0:name="android.permission.VIBRATE"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.DISABLE_KEYGUARD"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.GET_TASKS"/>
+	<uses-permission ns0:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission ns0:name="android.permission.READ_LOGS"/>
+	<uses-permission ns0:name="android.permission.WAKE_LOCK"/>
+	<uses-permission ns0:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission ns0:name="android.permission.CAMERA"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<application ns0:theme="@7F110009" ns0:label="@7F100059" ns0:icon="@7F0E002E" ns0:name="com.icare.iweight.ui.base.MyApplication" ns0:allowBackup="true" ns0:supportsRtl="true" ns0:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+		<activity ns0:theme="@7F110172" ns0:label="@7F100059" ns0:name="com.icare.iweight.ui.WelcomeActivity" ns0:screenOrientation="1">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="com.icare.iweight.ui.LoginActivity" ns0:launchMode="2" ns0:screenOrientation="1" ns0:windowSoftInputMode="0x00000020"/>
+		<activity ns0:name="com.icare.iweight.ui.RegisterActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.YouKeNewEditActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.ShareActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.ZhShareActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.HistoryTwoActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.BindDeviceActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.EditNewUserActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.XieyiActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.SyncHistoryActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.FirstWelcome" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.DanweiSwitchActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@7F110009" ns0:name="com.icare.iweight.ui.MainActivity" ns0:launchMode="2" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.UnitSwitchActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.AboutInfoNewActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.AnalysisDataActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.MyDeviceActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.FeedBackActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.HelpForConnectActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.BaikeActivity" ns0:exported="true" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.NewsWebViewActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.MuBiaoActivity" ns0:screenOrientation="1"/>
+		<service ns0:name="com.icare.iweight.services.InfosUpAndDownService"/>
+		<provider ns0:name="com.icare.iweight.alarm.AlarmProvider" ns0:exported="false" ns0:authorities="aicare.net.cn.myfit.deskclock"/>
+		<activity ns0:theme="@android:0103005F" ns0:name="com.icare.iweight.alarm.AlarmAlertFullScreen" ns0:taskAffinity="" ns0:excludeFromRecents="true" ns0:launchMode="3" ns0:configChanges="0x000000F0"/>
+		<activity ns0:theme="@7F110204" ns0:name="com.icare.iweight.alarm.AlarmAlert" ns0:taskAffinity="" ns0:excludeFromRecents="true" ns0:launchMode="3" ns0:configChanges="0x000000F0"/>
+		<receiver ns0:name="com.icare.iweight.alarm.AlarmReceiver" ns0:exported="false">
+			<intent-filter>
+				<action ns0:name="aicare.net.cn.myfit.deskclock.ALARM_ALERT"/>
+				<action ns0:name="alarm_killed"/>
+				<action ns0:name="cancel_snooze"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.icare.iweight.alarm.AlarmKlaxon" ns0:exported="false" ns0:description="@7F100057">
+			<intent-filter>
+				<action ns0:name="aicare.net.cn.myfit.deskclock.ALARM_ALERT"/>
+			</intent-filter>
+		</service>
+		<receiver ns0:name="com.icare.iweight.alarm.AlarmInitReceiver">
+			<intent-filter>
+				<action ns0:name="android.intent.action.BOOT_COMPLETED"/>
+				<action ns0:name="android.intent.action.TIME_SET"/>
+				<action ns0:name="android.intent.action.TIMEZONE_CHANGED"/>
+				<action ns0:name="android.intent.action.LOCALE_CHANGED"/>
+			</intent-filter>
+		</receiver>
+		<service ns0:name="com.icare.iweight.services.DownloadService"/>
+		<meta-data ns0:name="api_key" ns0:value="iz4YZYA9nCvghWlraWDGiErP"/>
+		<service ns0:name="com.icare.iweight.wby.WBYService"/>
+		<activity ns0:name="com.icare.iweight.ui.EditUserNewActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.FindPassWordActivity" ns0:screenOrientation="1"/>
+		<activity ns0:name="com.icare.iweight.ui.DayHistoryActivity" ns0:screenOrientation="1"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.mob.tools.MobUIShell" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000012">
+			<intent-filter>
+				<data ns0:scheme="tencent100371282"/>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+			<intent-filter>
+				<action ns0:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:theme="@android:01030010" ns0:name="com.icare.iweight.wxapi.WXEntryActivity" ns0:exported="true" ns0:screenOrientation="1" ns0:configChanges="0x000004A0"/>
+		<meta-data ns0:name="Mob-AppKey" ns0:value="1fe7b887a2c56"/>
+		<meta-data ns0:name="Mob-AppSecret" ns0:value="3e140ba2a11d8a0c5ee5559329fed575"/>
+		<provider ns0:name="android.support.v4.content.FileProvider" ns0:exported="false" ns0:authorities="aicare.net.cn.myfit" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F130000"/>
+		</provider>
+		<activity ns0:theme="@android:01030010" ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false"/>
+		<meta-data ns0:name="com.google.android.gms.version" ns0:value="@7F0A000D"/>
+		<activity ns0:theme="@7F1100CC" ns0:label="" ns0:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" ns0:exported="false"/>
+		<meta-data ns0:name="com.android.vending.derived.apk.id" ns0:value="1"/>
+	</application>
+</manifest>

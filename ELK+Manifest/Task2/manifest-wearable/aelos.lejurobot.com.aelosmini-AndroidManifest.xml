@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:versionCode="4165" ns0:versionName="1.6.2" ns0:compileSdkVersion="28" ns0:compileSdkVersionCodename="9" package="aelos.lejurobot.com.aelosmini" platformBuildVersionCode="28" platformBuildVersionName="9">
+	<uses-sdk ns0:minSdkVersion="18" ns0:targetSdkVersion="28"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH"/>
+	<uses-permission ns0:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission ns0:name="android.permission.INTERNET"/>
+	<uses-permission ns0:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+	<meta-data ns0:name="android.support.VERSION" ns0:value="25.3.1"/>
+	<application ns0:theme="@7F0F0004" ns0:label="@7F0E0038" ns0:icon="@7F0C0006" ns0:name="com.lejurobot.aelos.aelosmini.base.BaseApplication" ns0:allowBackup="true" ns0:largeHeap="true" ns0:supportsRtl="true" ns0:usesCleartextTraffic="true">
+		<activity ns0:theme="@7F0F00C9" ns0:name="com.lejurobot.aelos.aelosmini.activities.blockly.SimpleBlocklyActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000002"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.splash.SplashActivity" ns0:screenOrientation="0">
+			<intent-filter>
+				<action ns0:name="android.intent.action.MAIN"/>
+				<category ns0:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.help.HomeHelperActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.VideoPlayActivity" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.gamepad.GamePadActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.program.MotorsActivity" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.program.MotorsNewActivity" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.property.RobotPropertyActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.program.TaskSysActivity" ns0:launchMode="2" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.option.OptionActivity" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.option.InfoActivity" ns0:launchMode="1" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.program.ActionDocumentsActivity" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.option.FeedbackActivity" ns0:launchMode="1" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.option.SettingActivity" ns0:launchMode="2" ns0:screenOrientation="0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.home.MiniHomeActivity" ns0:launchMode="2" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.help.HelperActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.program.ActionProgramActvity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.program.TaskProgramActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:theme="@7F0F00C9" ns0:name="com.lejurobot.aelos.aelosmini.activities.blockly.TaskBlocklyActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000002"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.voiceplay.activities.VoicePlaySearchRobotActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.voiceplay.activities.VoicePlayShowActivity" ns0:configChanges="0x00000480"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.option.VoiceNetworkActivity" ns0:launchMode="2" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.IvyProgramActionActivity" ns0:screenOrientation="0"/>
+		<activity ns0:theme="@7F0F00C9" ns0:name="com.lejurobot.aelos.aelosmini.activities.IvyBlocklyActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000002"/>
+		<activity ns0:name="com.lejurobot.aelos.aelosmini.activities.school.activities.SchoolActivity" ns0:screenOrientation="0" ns0:configChanges="0x000004A0"/>
+		<service ns0:name="com.lejurobot.aelos.aelosmini.bluetooth.BlueService"/>
+		<service ns0:name="com.lejurobot.aelos.aelosmini.bluetooth.BleConnectStatusService"/>
+		<service ns0:name="com.lejurobot.aelos.aelosmini.activities.voiceplay.services.UdpService"/>
+		<provider ns0:name="android.support.v4.content.FileProvider" ns0:exported="false" ns0:authorities="aelos.lejurobot.com.aelosmini.fileProvider" ns0:grantUriPermissions="true">
+			<meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@7F110000"/>
+		</provider>
+		<service ns0:name="com.google.blockly.android.codegen.CodeGeneratorService" ns0:exported="false"/>
+		<uses-library ns0:name="android.test.runner"/>
+		<provider ns0:name="com.mob.MobProvider" ns0:exported="false" ns0:multiprocess="true" ns0:authorities="aelos.lejurobot.com.aelosmini.com.mob.MobProvider"/>
+		<meta-data ns0:name="Mob-AppKey" ns0:value="25ccec800a8c4"/>
+		<meta-data ns0:name="Mob-AppSeret" ns0:value="142d52b9957d7e07bc89004a0ae9624f"/>
+		<activity ns0:theme="@android:01030010" ns0:name="com.mob.tools.MobUIShell" ns0:configChanges="0x000004A0" ns0:windowSoftInputMode="0x00000012"/>
+		<activity ns0:name="cn.sharesdk.tencent.qq.ReceiveActivity" ns0:launchMode="2" ns0:noHistory="true">
+			<intent-filter>
+				<data ns0:scheme="tencent101531481"/>
+				<action ns0:name="android.intent.action.VIEW"/>
+				<category ns0:name="android.intent.category.DEFAULT"/>
+				<category ns0:name="android.intent.category.BROWSABLE"/>
+			</intent-filter>
+		</activity>
+		<activity ns0:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" ns0:exported="false" ns0:configChanges="0x000004A0"/>
+		<activity-alias ns0:name="aelos.lejurobot.com.aelosmini.wxapi.WXEntryActivity" ns0:exported="true" ns0:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity"/>
+		<meta-data ns0:name="com.android.vending.derived.apk.id" ns0:value="1"/>
+	</application>
+	<uses-permission ns0:name="android.permission.GET_TASKS"/>
+	<uses-permission ns0:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission ns0:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission ns0:name="android.permission.PACKAGE_USAGE_STATS"/>
+</manifest>
